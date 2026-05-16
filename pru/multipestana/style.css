@@ -1,6 +1,6 @@
 
 /* Importamos una fuente más moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');*/
 
 body {
     font-family: 'Inter', sans-serif;
@@ -94,8 +94,18 @@ input:focus {
     margin-top: 30px;
 }
 
-button[type="submit"] {
+
+
+/* Tu botón original de Enviar (se mantiene igual, solo quitamos width: 100%) */
+/* El contenedor para alinearlos */
+.button-group {
+    display: flex;
+    gap: 12px; /* Espacio de separación entre los dos botones */
     width: 100%;
+}
+
+button[type="submit"] {
+    flex: 10; /* Hace que se estire equitativamente */
     background-color: #28a745;
     color: white;
     padding: 14px;
@@ -104,8 +114,28 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    font-family: inherit;
 }
 
 button[type="submit"]:hover {
     background-color: #218838;
+}
+
+
+.btn-cancelar {
+    flex: 10; /* Hace que tenga el mismo ancho que el de enviar */
+    background-color: #e2e8f0;  /* Un gris claro neutro */
+    color: #4a5568; /* Texto gris oscuro para buen contraste */
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-family: inherit;
+}
+
+.btn-cancelar:hover {
+    background-color: #cbd5e1; /* Se oscurece un poco al pasar el mouse */
+    color: #1a202c;
 }

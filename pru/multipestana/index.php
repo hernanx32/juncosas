@@ -2,7 +2,7 @@
 <html lang="es"><head>
     <meta charset="UTF-8">
     <title>Formulario con Pestañas</title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">    
 </head>
 <body>
 
@@ -15,7 +15,6 @@
             <button type="button" class="tab-link" onclick="openTab(event, 'Configuracion')">Configuración Avanzada</button>
             <button type="button" class="tab-link" onclick="openTab(event, 'Otros')">otro</button>
 		</div>
-
         <!-- Contenido: Pestaña 1 -->
         <div id="Basicos" class="tab-content" style="display: block;">
             <h3>Datos General</h3>
@@ -39,7 +38,6 @@
             <input type="text" name="db_nombre" class="required-field">
         </div>
 		
-		
 		<!-- Contenido: Pestaña 3 -->
         <div id="Otros" class="tab-content" style="display: none;">
             <h3>Otros Ajustes</h3>
@@ -51,7 +49,10 @@
         </div>
 
         <div class="footer">
-            <button type="submit">Enviar Todos los Datos</button>
+			<div class="button-group">
+      	      <button type="button" class="btn-cancelar">Cancelar</button>
+				<button type="submit">Enviar Todos los Datos</button>
+			</div>
         </div>
     </form>
 </div>
