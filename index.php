@@ -13,14 +13,9 @@ cabeza($titulo,$path);
 
 
 ?>
-  	<link rel="stylesheet" href="css/google.css">
-  	<link rel="stylesheet" href="css/fontawesome-free/all.min.css">
-	<link rel="stylesheet" href="css/adminlte/adminlte.min.css">	
+
+ 
     
-
-
-</head>
-
 <body>
 
 <body class="hold-transition login-page">
@@ -73,18 +68,7 @@ cabeza($titulo,$path);
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

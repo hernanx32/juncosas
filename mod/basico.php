@@ -22,8 +22,17 @@ function cabeza($titulopag, $path)
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $titulopag; ?></title>
 </head>
+
+	<!--
+  	<link rel="stylesheet" href="/juncosas/css/google.css">
+  	<link rel="stylesheet" href="/juncosas/css/fontawesome-free/all.min.css">
+	<link rel="stylesheet" href="/juncosas/css/adminlte/adminlte.min.css">	
+	-->
+	<link rel="stylesheet" href="../comp/google.css">
+  	<link rel="stylesheet" href="../comp/plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="../comp/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../comp/dist/css/adminlte.min.css">	
+    <link rel="stylesheet" href="../comp/plugins/select2/css/select2.min.css">
 	
 <?PHP 
-// RETORNAMOS LA VARIABLE PARA PODER USARLA FUERA
-    return $config;
 }
