@@ -10,12 +10,12 @@ $nom_completo=$_SESSION['nombre'];
 $titulo='Sistema - Mi Cuenta';
 $path='';
 
-include("Modulos/html.php");
-include("Modulos/conex.php");
-include("Modulos/menu.php");
+include("mod/html.php");
+include("mod/conex.php");
+include("mod/menu.php");
 
 cabeza($titulo,$path);
-menu($nro_cat, $nom_completo , $nomb_acc);
+menu($nro_cat, $nom_completo , $nomb_acc, $path);
 
 //cargamos valores del formulario
 $sql=$conn->query("SELECT * FROM `usuario` WHERE id_usuario ='$id_us' ");
@@ -80,13 +80,12 @@ if ($conn->query($sql_a) === TRUE) {
 $mensaje_res=$resultado3;	
 ?>
 
-<form action="/Sisfage/micuenta.php?scr=actuliza" method="post" name="form1" id="form1" accept-charset="UTF-8">
+<form action="micuenta.php?scr=actuliza" method="post" name="form1" id="form1" accept-charset="UTF-8">
     
 <div class="container-fluid col-12 col-xxl-6 col-lg-6">
 	<div class="row">
     <div class="col-10">
-        <?php echo $mensaje_res; ?>
-        </div>
+        <?php echo $mensaje_res; ?></div>
     </div>
 	<div class="row">
 	<div class="col-2">
@@ -149,6 +148,7 @@ $mensaje_res=$resultado3;
     </div>
 </div>            
 	<div class="col-12" align="center">
+	<a href="principal.php" class="btn btn-outline-secondary">Cancela</a> - 
 	  <button class="btn btn-primary" type="submit" tabindex="5">Guardar Cambios</button>
 	</div>		
 				

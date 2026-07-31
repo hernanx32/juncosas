@@ -52,7 +52,7 @@ if (!isset($_COOKIE['device_id'])) {
         
 	    <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Volver</button>
+            <button type="submit" id="volver" class="btn btn-primary btn-block">Volver</button>
           </div>
           <!-- /.col -->
         </div>

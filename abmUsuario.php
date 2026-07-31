@@ -10,10 +10,10 @@ $nom_completo=$_SESSION['nombre'];
 $titulo='Sistema - ABM Usuarios';
 $path='';
 
-include("Modulos/html.php");
-include("Modulos/conex.php");
-include("Modulos/menu.php");
-include("Modulos/usuario/abmUsuario.php");
+include("mod/html.php");
+include("mod/conex.php");
+include("mod/menu.php");
+include("mod/usuario/abmUsuario.php");
 
 cabeza($titulo,$path);
 

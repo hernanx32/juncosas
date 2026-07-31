@@ -34,7 +34,7 @@ if (!isset($_GET['scr'])){
     }
 	if($scr=="datos"){
     include("mod/login/datos.php");
-    $focus='correo';
+    $focus='volver';
     }
 	
 	

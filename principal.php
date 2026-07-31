@@ -12,9 +12,9 @@ $path='';
 $focus='';
 
 
-include($path."Modulos/html.php");
-include($path."Modulos/conex.php");
-include($path."Modulos/menu.php");
+include($path."mod/html.php");
+include($path."mod/conex.php");
+include($path."mod/menu.php");
 
 cabeza($titulo,$path);
 menu($nro_cat, $nom_completo , $nomb_acc);
