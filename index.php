@@ -1,15 +1,14 @@
-<?PHP
+<?php
 session_start();
 $titulo='Sistema - Inicio';
 $path='';
-$mensaje='';
 
-include("mod/basico.php");
+include("mod/html.php");
 include("mod/conex.php");
+
 
 cabeza($titulo,$path);
 
-  
 if (isset($_GET['msj']))
 {
     $mensaje="<strong><span style='color: red;'>¡El Usuario y Clave son Incorrectos!..</span></strong>";    
@@ -33,14 +32,17 @@ if (!isset($_GET['scr'])){
     include("mod/login/olvidoclave.php");
     $focus='correo';
     }
+	if($scr=="datos"){
+    include("mod/login/datos.php");
+    $focus='correo';
+    }
+	
+	
+	
+	
 }
-	
-	
-	
-	echo "<BR>";
-	echo "Servidor:".$config['servidor']['ip']; 
-	echo " - Estado de Conexion:". $EstCon; 
-	
-	?>
-</body>
-</html>
+
+echo "Estado de Conexión: ".$EstCon ;
+pieindex($focus,$path);
+
+?>

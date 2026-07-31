@@ -12,12 +12,21 @@
     $clave=md5($clave);
       	 
 
-			$sql=$conn->query("SELECT * FROM `usuario` WHERE usuario='$usuario' AND clave='$clave' ");
+			$sql=$conn->query("
+			SELECT 
+    		u.*,
+			a.nombre AS nombre_acceso
+			FROM usuario u
+			INNER JOIN acceso a ON u.id_acceso = a.id_acceso
+			WHERE u.usuario ='$usuario' AND u.clave='$clave' ");
+			
+	
 			if ($sql->num_rows > 0) {
     			while($row = $sql->fetch_assoc()) {
 					$_SESSION['id_usuario'] = $row["id_usuario"];
 					$_SESSION['usuario'] = $row["usuario"];
 					$_SESSION['id_acceso'] = $row["id_acceso"];
+					$_SESSION['nomb_acceso'] = $row["nombre_acceso"];
 					$_SESSION['nombre'] = $row["nombre"];
 					}
     			/* liberar el conjunto de resultados */

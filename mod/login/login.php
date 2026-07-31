@@ -1,7 +1,4 @@
-<body>
-
 <body class="hold-transition login-page">
-	
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
@@ -10,6 +7,7 @@
     </div>
     <div class="card-body">
       <p class="login-box-msg"><?php echo $mensaje; ?></p>
+
       <form id="form1" name="form1"  action="index.php?scr=ingresar" method="post">
         <div class="input-group mb-3">
           <input name="usuario" type="text" required="required" class="form-control" id="usuario" placeholder="Usuario" onkeypress="return bajarEnter(this, event)" size="20" maxlength="20">
@@ -27,15 +25,23 @@
             </div>
           </div>
         </div>
- 	<div class="row">
+  <div class="row">
+          <!-- /.col -->
     <div class="col-5">
-  		<a href="index.php?scr=olvidoclave">¿Olvido Su Clave?</a>
-   	</div>         
+    <a href="index.php?scr=olvidoclave">¿Olvido Su Clave?</a> 
+	</div>         
     <div class="col-7">
-    	<button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
     </div>
+	<div class="col-7">
+	<a href="index.php?scr=datos">Datos</a>
 	</div>
+          <!-- /.col -->
+</div>
       </form>
+   
     </div>
+    <!-- /.card-body -->
   </div>
+  <!-- /.card -->
 </div>
