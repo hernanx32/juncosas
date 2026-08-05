@@ -9,13 +9,16 @@ $nom_completo=$_SESSION['nombre'];
 
 $titulo='Sistema - Mi Cuenta';
 $path='';
+$focus='';
+$config='';
 
+require 'config/config.php';
 include("mod/html.php");
 include("mod/conex.php");
 include("mod/menu.php");
 
 cabeza($titulo,$path);
-menu($nro_cat, $nom_completo , $nomb_acc, $path);
+menu($nro_cat, $nom_completo , $nomb_acc);
 
 //cargamos valores del formulario
 $sql=$conn->query("SELECT * FROM `usuario` WHERE id_usuario ='$id_us' ");

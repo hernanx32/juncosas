@@ -1,0 +1,15 @@
+{
+    "empresa": {
+        "nombre": "Junco SAS.",
+        "direccion": "Av. J. D. Peron 1699",
+        "telefono": "3704111111",
+        "email": "info@empresa.com",
+        "logo": "img\/logo.png"
+    },
+    "database": {
+        "host": "127.0.0.1",
+        "usuario": "root",
+        "password": "LauLukLulu477!",
+        "base": "bases"
+    }
+}

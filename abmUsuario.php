@@ -9,7 +9,10 @@ $nom_completo=$_SESSION['nombre'];
 
 $titulo='Sistema - ABM Usuarios';
 $path='';
+$focus='';
+$config='';
 
+require 'config/config.php';
 include("mod/html.php");
 include("mod/conex.php");
 include("mod/menu.php");

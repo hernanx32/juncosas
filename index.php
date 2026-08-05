@@ -2,9 +2,11 @@
 session_start();
 $titulo='Sistema - Inicio';
 $path='';
+								//Caracteristicas Principales
+require_once 'config/config.php';    //require: Si el archivo no existe: Error fatal y el script se detiene			Uso recomendado:Archivos indispensables
+include_once("mod/html.php");		//include: Si el archivo no existe: Advertencia (Warning) y el script continúa	Uso recomendado:Archivos opcionales
+include_once("mod/conex.php");		
 
-include("mod/html.php");
-include("mod/conex.php");
 
 
 cabeza($titulo,$path);

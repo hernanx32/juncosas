@@ -37,7 +37,7 @@ if ($nro_cat=='1'){
             <li><a href="#" class="dropdown-item">Rubros - Sub-Rubros</a></li>
 			<li><a href="prueba.php" class="dropdown-item">Opciones del Sistema</a></li>
 			<li class="dropdown-divider"></li>
-			<li><a href="Modulos/login/salir.php" class="dropdown-item">Salir</a></li>
+			<li><a href="mod/login/salir.php" class="dropdown-item">Salir</a></li>
 		</ul>
 		</li><!-- Fin Menu1  -->
 		<!-- Inicio Menu2 -->	

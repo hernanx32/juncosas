@@ -10,17 +10,32 @@ $nom_completo=$_SESSION['nombre'];
 $titulo='Sistema - Principal';
 $path='';
 $focus='';
+$config='';
 
-
-include($path."mod/html.php");
-include($path."mod/conex.php");
-include($path."mod/menu.php");
+require 'config/config.php';
+include("mod/html.php");
+include("mod/conex.php");
+include("mod/menu.php");
 
 cabeza($titulo,$path);
 menu($nro_cat, $nom_completo , $nomb_acc);
-echo $nro_cat;	
 
-echo "Pag. Principal en Construcción.";
+
+echo "Pag. Principal en Construcción.</br>";
+
+
+
+
+
+
+//echo $config['empresa']['nombre'];
+
+$host = $config['database']['host'];
+$user = $config['database']['usuario'];
+$pass = $config['database']['password'];
+$db   = $config['database']['base'];
+
+
 
 
 

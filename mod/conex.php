@@ -1,7 +1,13 @@
 <?php
 global $EstCon, $conn;
 
-$conn= new mysqli("127.0.0.1", "root", "LauLukLulu477!", "bases");
+$host = $config['database']['host'];
+$user = $config['database']['usuario'];
+$pass = $config['database']['password'];
+$db   = $config['database']['base'];
+
+
+$conn= new mysqli($host, $user, $pass, $db);
 $conn->set_charset("utf8");
 
 

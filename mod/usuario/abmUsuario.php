@@ -13,7 +13,7 @@ function abmUsuario($conn)
         }
     </script>
 <form action="abmUsuario.php?scr=buscar">
-<table width="750" border="1" align="center">
+<table width="750" border="1" align="center" class="table table-bordered table-striped dt-responsive nowrap" style="width:90%">
   <tbody>
     <tr>
       <th colspan="4" scope="col">
