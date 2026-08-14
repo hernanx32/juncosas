@@ -38,10 +38,7 @@ if (!isset($_GET['scr'])){
     include("mod/login/datos.php");
     $focus='volver';
     }
-	
-	
-	
-	
+		
 }
 
 echo "Estado de Conexión: ".$EstCon ;

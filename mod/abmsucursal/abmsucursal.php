@@ -13,7 +13,7 @@ function abmSuc($conn)
         }
     </script>
 <form>
-<table width="750" border="1" align="center">
+<table width="750" border="1" class="table table-bordered table-striped dt-responsive nowrap" style="width:90%" align="center">
   <tbody>
     <tr>
       <th colspan="4" scope="col">
@@ -47,7 +47,7 @@ if ($result->num_rows > 0) {
         echo "</td><td>";
         echo $row['domicilio'];
         echo "</td><td align='center'>";
-        echo "<a href='abmSucursales.php?scr=modificar&id=".$row['id_sucursal']."'>Modificar</a> </td></tr>"; 
+        echo "<a href='abmsucursales.php?scr=modificar&id=".$row['id_sucursal']."'>Modificar</a> </td></tr>"; 
     
     }
 } else {
@@ -60,7 +60,7 @@ echo "</tbody></table></form>";
 function agregar($conn){
 ?>
     
-    <form action="abmSucursales.php?scr=agregarnuevo" method="post" name="form1" id="form1">
+ <form action="abmSucursales.php?scr=agregarnuevo" method="post" name="form1" id="form1">
   <table width="507" border="1" align="center">
     <tbody>
       <tr>
@@ -109,7 +109,7 @@ function agregar($conn){
       </tr>
 
       <tr>
-        <td colspan="2" align="center"><a href="abmSucursales.php" class="btn btn-outline-secondary">Cancela</a> - 
+        <td colspan="2" align="center"><a href="abmsucursales.php" class="btn btn-outline-secondary">Cancela</a> - 
         <input class="btn btn-outline-success" type="submit" name="scr" id="scr" value="agregado"></td>
       </tr>
     </tbody>
@@ -121,16 +121,20 @@ function agregar($conn){
 //FUNCION INSERTAR NUEVA Sucursal
 function agregado($conn, $consulta){
 	$sql = $consulta;
-	//EJECUTANDO CODIGO DE ELIMINACION 
-	if ($conn->query($sql) === TRUE) {
+	//Nueva Sucursal 
+
+		
+	
+if ($conn->query($sql) === TRUE) {
 		//MENSAJE EN CASO QUE SEA CORRECTO	
 		echo "<div class='alert alert-success' role='alert'>Sucursal Agregado Correctamente.</div>";
-		echo "<td colspan='6' align='center'><a href='abmSucursales.php' class='btn btn-outline-secondary'>VOLVER</a>";
+		echo "<td colspan='6' align='center'><a href='abmsucursales.php' class='btn btn-outline-secondary'>VOLVER</a>";
 	   
 	} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    
 	echo "<div class='alert alert-danger' role='alert'>Error al agregar Nueva Sucursal.</div>";
-    echo "<td colspan='6' align='center'><a href='abmSucursales.php' class='btn btn-outline-secondary'>VOLVER</a>";
+    echo "<td colspan='6' align='center'><a href='abmsucursales.php' class='btn btn-outline-secondary'>VOLVER</a>";
+	echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 }
 
